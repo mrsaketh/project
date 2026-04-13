@@ -1,0 +1,29 @@
+1. College Bus Route Optimization
+
+A college has 8 pickup points across the city and only 3 buses available every morning. Each bus has a seating limit, and some students must reach earlier because they have lab sessions. Design a plan to assign students to buses and create routes so that all students arrive on time with minimum travel overlap and minimum fuel usage.
+
+8 - pickup points
+3 - buses
+  for eg;   college last entry time : 9 am
+                 lab stud entry : 7am
+             sitting cap : 45
+          Total stud : 150
+            8 points, 3 buses
+      collect the data which time they are available at pickup point.[ two slots they have to select - 7am slot and 9am slot]
+      if lab students less than 45 one bus is enough or else we have to use 2 or 3 buses picking up the students their nearest points to college by 7.(where it saves the time and fuel).
+ for normal students we have to allocate 3 buses
+     * 1to3   - if students less than 45 done or else assign them to second area(4-6 or 6-8) bus
+     * 4 to 6 - if student less than 45 done or else same as 1-3
+      * 6 to 8 - through the collecting input data we have to assure far pickup points capacity less than 45 and proceed to near point until the seating capacity occur.
+ or If the have students are more than the number(assume n) the bus make the different trips from clg to pickpoint according to the input data.
+                                                                                                   
+Algorithm
+1).  Collect the input data which time or slot they are available.(students)
+2).Input sitting capacity data and college time data
+3). Make the slots and inform the students about trip and bus details
+4).prioritizing lab students ------ if less than seating capacity 1 bus allocated to 8 pickpoint 
+                                                      if more than s cap --- by input data allocate slots and trips
+5). For normal students ------ through the slots and trip students will getin at pickup points.
+6).  conditions ---   by analyzing sitting capacity we have to allocate the trips to different picup points.
+                                making the conditions to capacity and max travel points to get overcome with overlap and fuel savage for minimum travel to allocate the slots.
+8). Done
